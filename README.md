@@ -23,8 +23,39 @@ Fin Session 28/07/2017 12:43
 TODOs
 - Meilleurs controles des entrées: (texte trop long pour l'écran, ...)
 - Gestion du multi-ligne pour l'écran.
-- Documentation de l'utilisation
+- Meilleure Doc
+- Amélioration des performances du rafraichissement
+- Gestion des Charsets
+
+Usage:
+//Initialisation
+var afficheur = new Afficheur( <emplacement>[, options]);
+
+//Affichage d'informations
+  afficheur.setData(<nombres_a_afficher>);
+
+
+Ex:
+  var go_LCD = new Afficheur('screen',{screen_width: 10, screen_height: 1});
+
+  go_LCD.setData('910');
+
+  produit:
+
+  ._....._......................
+  |_|..||.|.....................
+  ..|..||_|.....................
 
 
 
-Le fichier index.html contient un exemple d'utilisation
+Options:
+ screen_width: 50, //largeur physique de l'écran (en nombre de grid)
+ screen_height: 10, //hauteur physique de l'écran (en nombre de grid)
+ grid_width: 3, //largeur du grid
+ grid_height: 3, //hauteur du grid
+ refreshInterval: 1000 //intervalle de rafraichissement de l'écran en  millisecondes
+
+
+
+Demo:
+  Le fichier index.html contient un exemple d'utilisation
