@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+  <head>
+      <script src="js/Afficheur.js"></script>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+
+    <h3>Data</h3>
+    <input type="number" value="" id="Data"/><button type="button" onclick="SendDataToLCD(this)">Send</button>
+
+    <h3>Screen</h3>
+    <div id="screen"></div>
+
+    <script>
+
+      var go_LCD = new Afficheur('screen',{screen_width: 10, screen_height: 1});
+
+
+
+      function SendDataToLCD(pe_Element){
+
+        go_LCD.setData(document.getElementById('Data').value);
+
+      }
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
